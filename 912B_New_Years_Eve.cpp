@@ -21,9 +21,11 @@
             cout<<n<<endl;
             return 0;
         }
-        int m = 63 - __builtin_clzll(n);
+        //builtin_clzll gives number of leading zeros in binary representation of n, so 63-__builtin_clzll(n) gives length of highest power of 2 in n
+        int m=63-__builtin_clzll(n);
         int f=(1LL<<(m+1))-1;
         cout<<f<<endl;
  
  
     }
+    
