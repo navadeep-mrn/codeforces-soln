@@ -22,10 +22,10 @@ vector<int> fact;
 void solve(){
     int n,k;cin>>n>>k;
     int ca=0,cb=0,da=0,db=0;
-    ca=(k-1>=1 ? (k-2)/4+1 : 0);
-    cb=(n>=1 ? (n-1)/4+1 : 0)-ca;
-    da=1+(k-1>=3 ? (k-4)/4+1 : 0);
-    db=(1+(n>=3 ? (n-3)/4+1 : 0))-da;
+    ca=(k-1+3)/4;
+    cb=(n+3)/4-ca;
+    da=(k-1+1)/4+1;
+    db=(n+1)/4-k/4;
     int f=(ca%MOD)*(cb%MOD)%MOD;
     f+=(da%MOD)*(db%MOD)%MOD;
     f=f%MOD;
